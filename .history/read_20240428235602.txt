@@ -1,0 +1,11 @@
+1.npm init
+2.npm i express dotenv mongoose
+3. npm i nodemon --save-dev
+4.npm run dev :-custom command
+5. npm i validator :-email apdyaana validation kaaka
+6.npm i bcrypt :- password encrypt panna
+7.npm i jsonwebtoken :-package install
+8.npm i cookie-parser :-requestla irunthu cookie ah edukka(req.cookie)
+9. npm i crypto :-reset password kaana token ah generate pannirathukkaaka
+10.npm i nodemailer :- package ah install panna
+11. npx creat-react-app .:-thevyaana folders ah 
