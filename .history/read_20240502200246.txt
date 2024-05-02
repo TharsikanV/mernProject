@@ -1,0 +1,23 @@
+1.npm init
+2.npm i express dotenv mongoose
+3. npm i nodemon --save-dev
+4.npm run dev :-custom command
+5. npm i validator :-email apdyaana validation kaaka
+6.npm i bcrypt :- password encrypt panna
+7.npm i jsonwebtoken :-package install
+8.npm i cookie-parser :-requestla irunthu cookie ah edukka(req.cookie)
+9. npm i crypto :-reset password kaana token ah generate pannirathukkaaka
+10.npm i nodemailer :- package ah install panna
+////////////////////////frontend///////////////
+11. npx creat-react-app .:-thevyaana folders ah konduvanthidum
+12. npm i axios
+13.npm i react-helmet-async
+14.npm i redux
+15.npm i react-redux
+15.npm i redux-thunk
+16.//////////////////npm install redux-devtools-extension install aakla////////////////////////
+17.npm i react-router-dom
+18.npm uninstall redux and npm install @reduxjs/toolkit
+19.npm install --save react-toastify
+20. npm install react-bootstrap@1.x   :-image ah Carousel ah podavaam
+21
