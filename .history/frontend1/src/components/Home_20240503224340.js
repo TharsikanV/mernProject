@@ -23,7 +23,7 @@ export default function Home() {
                 // position:toast.POSITION.BOTTOM_CENTER
             })
         }
-        dispatch(getProducts(null,null,null,null,currentPage))//inka naama search panna porathilla so null kodukkanum
+        dispatch(getProducts(null,null,null,currentPage))//inka naama search panna porathilla so null kodukkanum
     }, [error,dispatch,currentPage])
     return (
         <Fragment>

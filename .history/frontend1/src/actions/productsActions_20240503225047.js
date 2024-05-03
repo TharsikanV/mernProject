@@ -17,8 +17,8 @@ export const getProducts=(keyword,price,category,rating,currentPage)=>async(disp
         if(category){
             link+=`&category=${category}`;//concatinate panniram
         }
-        if(rating){
-            link+=`&ratings=${rating}`;//concatinate panniram
+        if(category){
+            link+=`&category=${category}`;//concatinate panniram
         }
 
         const {data}=await axios.get(link);

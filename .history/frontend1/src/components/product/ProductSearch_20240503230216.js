@@ -128,9 +128,6 @@ export default function ProductSearch() {
                                                 <div className="rating-outer">{/**stars kaaka */}
                                                     <div
                                                         className="rating-inner"
-                                                        style={{
-                                                            width:`${star*20}%`
-                                                        }}
 
                                                     >
 

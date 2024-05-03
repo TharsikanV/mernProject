@@ -129,7 +129,7 @@ export default function ProductSearch() {
                                                     <div
                                                         className="rating-inner"
                                                         style={{
-                                                            width:`${star*20}%`
+                                                            width:``
                                                         }}
 
                                                     >

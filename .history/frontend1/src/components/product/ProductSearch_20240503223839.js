@@ -18,8 +18,7 @@ export default function ProductSearch() {
     const [currentPage, setCurrentPage] = useState(1);//paginationkaaka
     const [price, setPrice] = useState([1, 1000]);
     const [priceChanged, setPriceChanged] = useState(price);
-    const [category, setCategory] = useState(null);
-    const [rating, setRating] = useState(0);
+    const []
 
     const { keyword } = useParams();
     const categories = [
@@ -47,8 +46,8 @@ export default function ProductSearch() {
                 // position:toast.POSITION.BOTTOM_CENTER
             })
         }
-        dispatch(getProducts(keyword, price, category, rating, currentPage))
-    }, [error, dispatch, currentPage, keyword, priceChanged, category, rating])//price kku pathila priceChanged ah koduthaa adikkadi slider maara maara load aakirathu thadukkapadum
+        dispatch(getProducts(keyword, price, currentPage))
+    }, [error, dispatch, currentPage, keyword, priceChanged])//price kku pathila priceChanged ah koduthaa adikkadi slider maara maara load aakirathu thadukkapadum
     return (
         <Fragment>
             {loading ? <Loader /> :
@@ -99,8 +98,8 @@ export default function ProductSearch() {
                                                     listStyleType: "none",
                                                 }}
                                                 key={category}//ovvoru list item ayum react kandupidikkirathukku thanithuvamaa key irukkanum
-                                                onClick={() => {
-                                                    setCategory(category)
+                                                onClick={()=>{
+
                                                 }}
                                             >
                                                 {category}
@@ -109,38 +108,7 @@ export default function ProductSearch() {
 
                                     </ul>
                                 </div>
-                                <hr className="my-5" />
-                                {/**Ratings Filter */}
-                                <div className="mt-5">
-                                    <h4 className="mb-3">Ratings</h4>
-                                    <ul className="pl-0">
-                                        {[5, 4, 3, 2, 1].map(star =>
-                                            <li
-                                                style={{
-                                                    cursor: "pointer",
-                                                    listStyleType: "none",
-                                                }}
-                                                key={star}//ovvoru list item ayum react kandupidikkirathukku thanithuvamaa key irukkanum
-                                                onClick={() => {
-                                                    setRating(star)
-                                                }}
-                                            >
-                                                <div className="rating-outer">{/**stars kaaka */}
-                                                    <div
-                                                        className="rating-inner"
-                                                        style={{
-                                                            width:`${star*20}%`
-                                                        }}
 
-                                                    >
-
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        )}
-
-                                    </ul>
-                                </div>
                             </div>
                             <div className="col-6 col-md-9">
                                 <div className="row">

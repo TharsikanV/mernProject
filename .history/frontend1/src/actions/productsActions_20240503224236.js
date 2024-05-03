@@ -3,7 +3,7 @@
 import axios from 'axios';
 import { productsRequest, productsFail, productsSuccess } from '../slices/productsSlice';
 
-export const getProducts=(keyword,price,category,rating,currentPage)=>async(dispatch)=>{
+export const getProducts=(keyword,price,category,currentPage)=>async(dispatch)=>{
     try{
         dispatch(productsRequest())//action creater ah ull koduthiddam
         let link=`/api/v1/products?page=${currentPage}`;
@@ -15,11 +15,9 @@ export const getProducts=(keyword,price,category,rating,currentPage)=>async(disp
             link+=`&price[gte]=${price[0]}&price[lte]=${price[1]}`;//concatinate panniram
         }
         if(category){
-            link+=`&category=${category}`;//concatinate panniram
+            link+=`&category=${}`;//concatinate panniram
         }
-        if(rating){
-            link+=`&ratings=${rating}`;//concatinate panniram
-        }
+
 
         const {data}=await axios.get(link);
         dispatch(productsSuccess(data))
