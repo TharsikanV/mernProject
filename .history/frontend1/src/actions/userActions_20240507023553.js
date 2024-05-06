@@ -99,13 +99,8 @@ export const updateProfile=(userData)=> async (dispatch)=>{
 export const updatePassword=(formData)=> async (dispatch)=>{
     try{
         dispatch(updatePasswordRequest())
-        const config={
-            headers:{
-                'Content-type':'application/json'
-            }
-        }
 
-        await axios.put(`/api/v1/password/change`,formData,config);
+        await axios.put(`/api/v1/password/change`,userData,config);
         dispatch(updatePasswordSuccess())
     }catch(error){
         dispatch(updatePasswordFail(error.response.data.message))

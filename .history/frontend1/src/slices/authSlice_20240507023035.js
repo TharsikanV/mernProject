@@ -160,10 +160,7 @@ export const {
     logoutFail,
     updateProfileRequest,
     updateProfileSuccess,
-    updateProfileFail,
-    updatePasswordRequest,
-    updatePasswordSuccess,
-    updatePasswordFail
+    updateProfileFail
     }=actions;
 
 export default reducer;

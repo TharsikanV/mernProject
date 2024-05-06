@@ -37,7 +37,7 @@ function App() {
               <Route path='/register' element={<Register/>} />
               <Route path='/myProfile' element={<ProtectedRoute><Profile/></ProtectedRoute>} />{/**protect panna components ah */}
               <Route path='/myProfile/update' element={<ProtectedRoute><UpdateProfile/></ProtectedRoute>} />
-              <Route path='/myProfile/update/password' element={<ProtectedRoute><UpdatePassword/></ProtectedRoute>} />
+              <Route path='/myProfile/update/password' element={<ProtectedRoute><UpdatePassword</ProtectedRoute>} />
             </Routes>
           </div>
           <Footer />

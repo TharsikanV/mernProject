@@ -129,6 +129,7 @@ const authSlice= createSlice({
             return{
                 ...state,
                 loading:false,
+                user:action.payload.user,
                 isUpdated:true
             }
         },
@@ -160,10 +161,7 @@ export const {
     logoutFail,
     updateProfileRequest,
     updateProfileSuccess,
-    updateProfileFail,
-    updatePasswordRequest,
-    updatePasswordSuccess,
-    updatePasswordFail
+    updateProfileFail
     }=actions;
 
 export default reducer;

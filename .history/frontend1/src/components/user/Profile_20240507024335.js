@@ -28,9 +28,9 @@ export default function Profile() {
                     My Orders
                 </a>
 
-                <Link to="/myProfile/update/password" className="btn btn-primary btn-block mt-3">
+                <Li href="#" className="btn btn-primary btn-block mt-3">
                     Change Password
-                </Link>
+                </a>
             </div>
         </div>
     )

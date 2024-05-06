@@ -117,7 +117,7 @@ const authSlice= createSlice({
                 error:action.payload
             }
         },
-        updatePasswordRequest(state,action){
+        updatePassRequest(state,action){
             return{
                 ...state,//earkanave statela irukkira values ah kondu vanthidum thevyanatha kela maathikkalaam
                 loading:true,
@@ -125,14 +125,15 @@ const authSlice= createSlice({
             }
                 
         },
-        updatePasswordSuccess(state,action){
+        updateProfileSuccess(state,action){
             return{
                 ...state,
                 loading:false,
+                user:action.payload.user,
                 isUpdated:true
             }
         },
-        updatePasswordFail(state,action){
+        updateProfileFail(state,action){
             return{
                 ...state,
                 loading:false,
@@ -160,10 +161,7 @@ export const {
     logoutFail,
     updateProfileRequest,
     updateProfileSuccess,
-    updateProfileFail,
-    updatePasswordRequest,
-    updatePasswordSuccess,
-    updatePasswordFail
+    updateProfileFail
     }=actions;
 
 export default reducer;

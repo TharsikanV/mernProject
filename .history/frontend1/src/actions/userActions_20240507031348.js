@@ -105,7 +105,7 @@ export const updatePassword=(formData)=> async (dispatch)=>{
             }
         }
 
-        await axios.put(`/api/v1/password/change`,formData,config);
+        await axios.put(`/api/v1/password/change`,formData);
         dispatch(updatePasswordSuccess())
     }catch(error){
         dispatch(updatePasswordFail(error.response.data.message))

@@ -12,9 +12,7 @@ import {
     registerFail, 
     registerRequest, 
     registerSuccess,
-    updatePasswordFail,
     updatePasswordRequest,
-    updatePasswordSuccess,
     updateProfileFail,
     updateProfileRequest,
     updateProfileSuccess
@@ -99,15 +97,19 @@ export const updateProfile=(userData)=> async (dispatch)=>{
 export const updatePassword=(formData)=> async (dispatch)=>{
     try{
         dispatch(updatePasswordRequest())
+        
+        //requestkkaana content type ah maathavendi irukku 
+        //because image um varum endrathaala
         const config={
             headers:{
-                'Content-type':'application/json'
+                'Content-type':'multipart/form-data'
             }
         }
 
-        await axios.put(`/api/v1/password/change`,formData,config);
-        dispatch(updatePasswordSuccess())
+
+        const {data}=await axios.put(`/api/v1/update`,userData,config);
+        dispatch(updateProfileSuccess(data))
     }catch(error){
-        dispatch(updatePasswordFail(error.response.data.message))
+        dispatch(updateProfileFail(error.response.data.message))
     }
 }

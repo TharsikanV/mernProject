@@ -101,11 +101,11 @@ export const updatePassword=(formData)=> async (dispatch)=>{
         dispatch(updatePasswordRequest())
         const config={
             headers:{
-                'Content-type':'application/json'
+                'Content-type':'applic'
             }
         }
 
-        await axios.put(`/api/v1/password/change`,formData,config);
+        await axios.put(`/api/v1/password/change`,formData);
         dispatch(updatePasswordSuccess())
     }catch(error){
         dispatch(updatePasswordFail(error.response.data.message))

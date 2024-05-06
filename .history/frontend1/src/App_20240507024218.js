@@ -16,7 +16,6 @@ import { loadUser } from './actions/userActions';
 import Profile from './components/user/Profile';
 import ProtectedRoute from './components/route/ProtectedRoute';
 import UpdateProfile from './components/user/UpdateProfile';
-import UpdatePassword from './components/user/UpdatePassword';
 
 function App() {
   useEffect(()=>{
@@ -37,7 +36,7 @@ function App() {
               <Route path='/register' element={<Register/>} />
               <Route path='/myProfile' element={<ProtectedRoute><Profile/></ProtectedRoute>} />{/**protect panna components ah */}
               <Route path='/myProfile/update' element={<ProtectedRoute><UpdateProfile/></ProtectedRoute>} />
-              <Route path='/myProfile/update/password' element={<ProtectedRoute><UpdatePassword/></ProtectedRoute>} />
+              <Route path='/myProfile/update/' element={<ProtectedRoute><UpdateProfile/></ProtectedRoute>} />
             </Routes>
           </div>
           <Footer />
