@@ -88,9 +88,11 @@ const authSlice= createSlice({
                 isAuthenticated:false
             }
         },
-        logoutFail(state,action){
+        logFail(state,action){
             return{
                 ...state,
+                loading:false,
+                // isAuthenticated:false, thevalla
                 error:action.payload
             }
         },
@@ -110,9 +112,7 @@ export const {
     registerFail,
     loadUserRequest,
     loadUserSuccess,
-    loadUserFail,
-    logoutSuccess,
-    logoutFail
+    loadUserFail
     }=actions;
 
 export default reducer;

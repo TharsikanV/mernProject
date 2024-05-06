@@ -110,9 +110,7 @@ export const {
     registerFail,
     loadUserRequest,
     loadUserSuccess,
-    loadUserFail,
-    logoutSuccess,
-    logoutFail
+    loadUserFail
     }=actions;
 
 export default reducer;

@@ -111,8 +111,7 @@ export const {
     loadUserRequest,
     loadUserSuccess,
     loadUserFail,
-    logoutSuccess,
-    logoutFail
+    log
     }=actions;
 
 export default reducer;

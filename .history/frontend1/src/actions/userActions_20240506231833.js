@@ -7,8 +7,6 @@ import {
     loginFail, 
     loginRequest, 
     loginSuccess, 
-    logoutFail, 
-    logoutSuccess, 
     registerFail, 
     registerRequest, 
     registerSuccess
@@ -63,9 +61,11 @@ export const loadUser =async (dispatch)=>{
 
 export const logout =async (dispatch)=>{
     try{
-        await axios.get(`/api/v1/logout`);
-        dispatch(logoutSuccess())
+        
+        
+        const {data}=await axios.get(`/api/v1/logout`);
+        dispatch(loadUserSuccess(data))
     }catch(error){
-        dispatch(logoutFail)
+        dispatch(loadUserFail(error.response.data.message))
     }
 }//ithu eppavum nadkkanum endrathaala app.js la kodukkanum

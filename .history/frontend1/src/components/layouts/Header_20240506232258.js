@@ -3,14 +3,13 @@ import Search from './Search';
 import { Link } from 'react-router-dom';
 import {useDispatch, useSelector} from 'react-redux';
 import {DropdownButton,Dropdown,Image} from 'react-bootstrap';
-import { logout } from '../../actions/userActions';
 
 export default function Header(){
 
     const {isAuthenticated,user}=useSelector(state=>state.authState);
     const dispatch=useDispatch();
     const logoutHandler=()=>{
-        dispatch(logout);
+        dispatch(logo)
     }
     return(
         <nav className="navbar row">

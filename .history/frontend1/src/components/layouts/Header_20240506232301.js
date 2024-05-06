@@ -10,7 +10,7 @@ export default function Header(){
     const {isAuthenticated,user}=useSelector(state=>state.authState);
     const dispatch=useDispatch();
     const logoutHandler=()=>{
-        dispatch(logout);
+        dispatch(logout)
     }
     return(
         <nav className="navbar row">
