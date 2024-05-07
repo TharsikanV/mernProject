@@ -14,7 +14,7 @@ export default function ProductDetail() {
 
     const increaseQty=()=>{
         const count=document.querySelector('.count');
-        if (product.stock==0 || count.valueAsNumber>=product.stock) {
+        if (product.stock!==0 && count.valueAsNumber>=product.stock) {
             return;
         }
         const qty=count.valueAsNumber + 1;

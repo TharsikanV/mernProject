@@ -14,7 +14,7 @@ export default function ProductDetail() {
 
     const increaseQty=()=>{
         const count=document.querySelector('.count');
-        if (product.stock==0 || count.valueAsNumber>=product.stock) {
+        if (product.stock!==0 && count.valueAsNumber>=product.stock) {
             return;
         }
         const qty=count.valueAsNumber + 1;
@@ -72,7 +72,7 @@ export default function ProductDetail() {
 
                                 <span className="btn btn-primary plus" onClick={increaseQty}>+</span>
                             </div>
-                            <button type="button" id="cart_btn" disabled={product.stock==0?true:false} className="btn btn-primary d-inline ml-4">Add to Cart</button>
+                            <button type="button" id="cart_btn" disabled={product.stock} className="btn btn-primary d-inline ml-4">Add to Cart</button>
 
                             <hr />
 
