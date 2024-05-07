@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux";
-import { clearAuthError,resetPassword } from "../../actions/userActions";
+import { clearAuthError, forgotPassword, resetPassword } from "../../actions/userActions";
 import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 

@@ -70,7 +70,7 @@ export default function Register() {
             return
         }
 
-    },[error,isAuthenticated,dispatch,navigate])
+    },[error,isAuthenticated,dispatch])
 
     return (
         <div className="row wrapper">
@@ -113,7 +113,7 @@ export default function Register() {
                                     <img
                                         src={avatarPreview}
                                         className='rounded-circle'
-                                        alt='Avatar'
+                                        alt='image'
                                     />
                                 </figure>
                             </div>

@@ -51,7 +51,7 @@ export default function UpdateProfile() {
             toast('Profile updated successfully',{
                 type:'success',
                 // position:toast.POSITION.BOTTOM_CENTER
-                onOpen:()=>dispatch(clearUpdateProfile())//isUpdated true aakidum
+                onOpen:()=>dispatch(clearUpdateProfile)
             })
             return;
         }

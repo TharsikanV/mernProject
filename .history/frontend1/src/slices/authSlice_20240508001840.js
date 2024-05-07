@@ -79,7 +79,7 @@ const authSlice= createSlice({
                 ...state,
                 loading:false,
                 // isAuthenticated:false, thevalla
-               // error:action.payload ithen thevall enda ovvoru muryum summa summa error msg vanthidu irukku  athu thevayum kidayaathu namakku
+               // error:action.payload ithen thevall enda ovvoru muryum summa summa error msg vanthidu irukku  
             }
         },
         logoutSuccess(state,action){
@@ -115,12 +115,6 @@ const authSlice= createSlice({
                 ...state,
                 loading:false,
                 error:action.payload
-            }
-        },
-        clearUpdateProfile(state,action){//isupdated ah clear panna beacause update pannidu thirumpa pokavu toast success msg kaadithu
-            return{
-                ...state,
-                isUpdated:false
             }
         },
         updatePasswordRequest(state,action){
@@ -214,7 +208,6 @@ export const {
     updateProfileRequest,
     updateProfileSuccess,
     updateProfileFail,
-    clearUpdateProfile,
     updatePasswordRequest,
     updatePasswordSuccess,
     updatePasswordFail,

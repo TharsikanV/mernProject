@@ -117,7 +117,7 @@ const authSlice= createSlice({
                 error:action.payload
             }
         },
-        clearUpdateProfile(state,action){//isupdated ah clear panna beacause update pannidu thirumpa pokavu toast success msg kaadithu
+        clearUpdateProfile(state,action){//isupdated ah clear panna
             return{
                 ...state,
                 isUpdated:false
@@ -214,7 +214,6 @@ export const {
     updateProfileRequest,
     updateProfileSuccess,
     updateProfileFail,
-    clearUpdateProfile,
     updatePasswordRequest,
     updatePasswordSuccess,
     updatePasswordFail,

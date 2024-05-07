@@ -24,7 +24,7 @@ export default function Profile() {
                 <h4>joined</h4>
                 <p>{String(user.createdAt).substring(0,10)}</p>
 
-                <a href="javascript;" className="btn btn-danger btn-block mt-5">
+                <a href="java" className="btn btn-danger btn-block mt-5">
                     My Orders
                 </a>
 

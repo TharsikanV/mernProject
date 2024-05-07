@@ -214,7 +214,7 @@ export const {
     updateProfileRequest,
     updateProfileSuccess,
     updateProfileFail,
-    clearUpdateProfile,
+    
     updatePasswordRequest,
     updatePasswordSuccess,
     updatePasswordFail,
