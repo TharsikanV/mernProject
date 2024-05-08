@@ -18,9 +18,7 @@ export default function Cart() {
         dispatch(decreaseCartItemQty(item.product))
     }
 
-    const checkoutHandler=()=>{
-        navigate('/login?redirect=shipping')
-    }
+    const checkout
 
     return (
         <Fragment>
@@ -78,7 +76,7 @@ export default function Cart() {
                                 {/* reducer oru array la irukkira kanakka valu ah ondaakum */}
 
                                 <hr />
-                                <button id="checkout_btn" onClick={checkoutHandler} className="btn btn-primary btn-block">Check out</button>
+                                <button id="checkout_btn" className="btn btn-primary btn-block">Check out</button>
                             </div>
                         </div>
                     </div>

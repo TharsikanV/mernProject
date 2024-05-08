@@ -70,10 +70,6 @@ const cartSlice= createSlice({
         },
         saveShippingInfo(state,action){
             localStorage.setItem('shippingInfo',JSON.stringify(action.payload));
-            return{
-                ...state,
-                shippingInfo:action.payload
-            }
         }
        
     }
@@ -86,8 +82,7 @@ export const {
     addCartItemSuccess,
     increaseCartItemQty,
     decreaseCartItemQty,
-    removeItemFromCart,
-    saveShippingInfo
+    removeItemFromCart
 }=actions
 
 export default reducer;

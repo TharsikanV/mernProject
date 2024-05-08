@@ -10,10 +10,10 @@ export default function Login() {
     const [password,setPassword]=useState("");
     const dispatch=useDispatch();
     const navigate=useNavigate();
-    const location=useLocation();
+    const location=useLocation
 
     const {loading,error,isAuthenticated}=useSelector(state=>state.authState);//state
-    const redirect=location.search?'/'+location.search.split('=')[1]:'/';//shipping or /
+    const 
 
 
     const submitHandler=(e)=>{
@@ -23,7 +23,7 @@ export default function Login() {
 
     useEffect(()=>{
         if(isAuthenticated){
-            navigate(redirect) //  /shipping or /
+            navigate('/')
         }
         if(error){
             toast(error,{

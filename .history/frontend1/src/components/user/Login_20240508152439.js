@@ -3,19 +3,18 @@ import MetaData from '../layouts/MetaData';
 import { clearAuthError, login } from '../../actions/userActions';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Login() {
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
     const dispatch=useDispatch();
     const navigate=useNavigate();
-    const location=useLocation();
 
     const {loading,error,isAuthenticated}=useSelector(state=>state.authState);//state
-    const redirect=location.search?'/'+location.search.split('=')[1]:'/';//shipping or /
 
 
+    
     const submitHandler=(e)=>{
         e.preventDefault();
         dispatch(login(email,password))//login function action data ah kodukkum and dispatch function action data ah store kku anuppum and anka athukkeththa maariyaana redcer velayal nadakkum
@@ -23,7 +22,7 @@ export default function Login() {
 
     useEffect(()=>{
         if(isAuthenticated){
-            navigate(redirect) //  /shipping or /
+            navigate('/')
         }
         if(error){
             toast(error,{

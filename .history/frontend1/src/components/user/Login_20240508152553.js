@@ -3,17 +3,17 @@ import MetaData from '../layouts/MetaData';
 import { clearAuthError, login } from '../../actions/userActions';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Login() {
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
     const dispatch=useDispatch();
     const navigate=useNavigate();
-    const location=useLocation();
+    
 
     const {loading,error,isAuthenticated}=useSelector(state=>state.authState);//state
-    const redirect=location.search?'/'+location.search.split('=')[1]:'/';//shipping or /
+    const 
 
 
     const submitHandler=(e)=>{
@@ -23,7 +23,7 @@ export default function Login() {
 
     useEffect(()=>{
         if(isAuthenticated){
-            navigate(redirect) //  /shipping or /
+            navigate('/')
         }
         if(error){
             toast(error,{

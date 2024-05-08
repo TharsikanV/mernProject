@@ -13,7 +13,7 @@ export default function Login() {
     const location=useLocation();
 
     const {loading,error,isAuthenticated}=useSelector(state=>state.authState);//state
-    const redirect=location.search?'/'+location.search.split('=')[1]:'/';//shipping or /
+    const redirect=location.search?'/'+location.search.split('=')[1]:'/';
 
 
     const submitHandler=(e)=>{

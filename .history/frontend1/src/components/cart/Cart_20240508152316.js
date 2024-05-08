@@ -19,7 +19,7 @@ export default function Cart() {
     }
 
     const checkoutHandler=()=>{
-        navigate('/login?redirect=shipping')
+        navigate()
     }
 
     return (
@@ -78,7 +78,7 @@ export default function Cart() {
                                 {/* reducer oru array la irukkira kanakka valu ah ondaakum */}
 
                                 <hr />
-                                <button id="checkout_btn" onClick={checkoutHandler} className="btn btn-primary btn-block">Check out</button>
+                                <button id="checkout_btn" className="btn btn-primary btn-block">Check out</button>
                             </div>
                         </div>
                     </div>
