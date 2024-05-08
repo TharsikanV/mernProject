@@ -71,7 +71,7 @@ export default function Cart() {
                                 <hr />
                                 <p>Subtotal:  <span className="order-summary-values">{items.reduce((acc,item)=>(acc+item.quantity),0)} (Units)</span></p>
                                 <p>Est. total: <span className="order-summary-values">${items.reduce((acc,item)=>(acc+item.quantity * item.price),0)}</span></p>
-                                {/* reducer oru array la irukkira kanakka valu ah ondaakum */}
+                                {/* reducer oru array la irukkira kanakka valu */}
 
                                 <hr />
                                 <button id="checkout_btn" className="btn btn-primary btn-block">Check out</button>

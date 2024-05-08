@@ -66,7 +66,7 @@ const cartSlice= createSlice({
                 ...state,
                 items:filterItems
             }
-        },
+        }
        
     }
 });
@@ -77,8 +77,7 @@ export const {
     addCartItemRequest,
     addCartItemSuccess,
     increaseCartItemQty,
-    decreaseCartItemQty,
-    removeItemFromCart
+    decreaseCartItemQty
 }=actions
 
 export default reducer;

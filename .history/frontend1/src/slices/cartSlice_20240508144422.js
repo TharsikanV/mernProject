@@ -61,12 +61,8 @@ const cartSlice= createSlice({
             const filterItems=state.items.filter(item=>{
                 return item.product!=action.payload
             })
-            localStorage.setItem('cartItems',JSON.stringify(filterItems));
-            return{
-                ...state,
-                items:filterItems
-            }
-        },
+            return
+        }
        
     }
 });
@@ -77,8 +73,7 @@ export const {
     addCartItemRequest,
     addCartItemSuccess,
     increaseCartItemQty,
-    decreaseCartItemQty,
-    removeItemFromCart
+    decreaseCartItemQty
 }=actions
 
 export default reducer;

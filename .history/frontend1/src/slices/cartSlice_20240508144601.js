@@ -78,7 +78,7 @@ export const {
     addCartItemSuccess,
     increaseCartItemQty,
     decreaseCartItemQty,
-    removeItemFromCart
+    re
 }=actions
 
 export default reducer;
