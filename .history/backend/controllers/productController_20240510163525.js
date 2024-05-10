@@ -46,7 +46,7 @@ const newProduct=catchAsyncError(async(req,res,next)=>{
 
 //Get Single Product- /api/v1/product/:id
 const getSingleProduct=catchAsyncError(async(req,res,next)=>{
-   const product=await Product.findById(req.params.id).populate('reviews.user','name email');
+   const product=await Product.findById(req.params.id).populate('');
    if(!product){
       // return res.status(404).json({
       //   success:false,

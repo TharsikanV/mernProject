@@ -64,10 +64,10 @@ const productSlice= createSlice({
             }
             
         },
-        clearProduct(state,action){
+        clear(state,action){
             return{
                 ...state,
-                product:{}
+                error:null
             }
             
         }
@@ -84,8 +84,7 @@ export const {
     createReviewSuccess,
     createReviewFail,
     clearReviewSubmitted,
-    clearError,
-    clearProduct
+    clearError
 }=actions
 
 export default reducer;

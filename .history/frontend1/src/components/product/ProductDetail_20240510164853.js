@@ -80,7 +80,7 @@ export default function ProductDetail() {
         //inthe randu santharpathila maddumthaan gtiaproduct(id) callpannapadanum
         return ()=>{
             dispatch(clearProduct()) 
-        }//intha component ah viddu veliya pokum pothu intha action call seyyapaddu product field empty aakum
+        }//intha component ah viddu veliya pokum pothu intha action call seyyapaddu product filed
 
     }, [dispatch, id, isReviewSubmitted, error])//eppa elaam isReviewSubmitted value maatha paditho getProduct(id) call pannapadum
 

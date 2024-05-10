@@ -84,8 +84,7 @@ export const {
     createReviewSuccess,
     createReviewFail,
     clearReviewSubmitted,
-    clearError,
-    clearProduct
+    clearError,clearProduct
 }=actions
 
 export default reducer;

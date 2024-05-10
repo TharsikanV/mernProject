@@ -7,7 +7,7 @@ import { Carousel } from 'react-bootstrap';
 import MetaData from "../layouts/MetaData";
 import { addCartItem } from "../../actions/cartActions";
 import { Modal } from 'react-bootstrap';
-import { clearError, clearProduct, clearReviewSubmitted } from "../../slices/productSlice";
+import { clearError, clearReviewSubmitted } from "../../slices/productSlice";
 import { toast } from 'react-toastify';
 import ProductReview from "./ProductReview";
 
@@ -61,7 +61,7 @@ export default function ProductDetail() {
                     dispatch(clearReviewSubmitted())
                 }
             })
-            // return keela pokanumappahaana review maari irukkum keela
+            // return keela pokanumappahaana 
         }
 
         if (error) {
@@ -78,9 +78,6 @@ export default function ProductDetail() {
             dispatch(getProduct(id))
         }
         //inthe randu santharpathila maddumthaan gtiaproduct(id) callpannapadanum
-        return ()=>{
-            dispatch(clearProduct()) 
-        }//intha component ah viddu veliya pokum pothu intha action call seyyapaddu product field empty aakum
 
     }, [dispatch, id, isReviewSubmitted, error])//eppa elaam isReviewSubmitted value maatha paditho getProduct(id) call pannapadum
 
