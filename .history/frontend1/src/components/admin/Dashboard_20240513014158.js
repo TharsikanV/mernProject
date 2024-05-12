@@ -2,14 +2,11 @@ import { useEffect } from "react";
 import Sidebar from "./Sidebar";
 import {useDispatch, useSelector} from 'react-redux';
 import { getAdminProducts } from "../../actions/productActions";
-import {getUsers} from '../../actions/userActions';
-import {adminOrders as adminOrdersAction} from '../../actions/orderActions';
-import { Link } from "react-router-dom";
 
 export default function Dashboard() {
     const {products=[]}=useSelector(state=>state.productsState);
     const {adminOrders=[]}=useSelector(state=>state.orderState);
-    const {users=[]}=useSelector(state=>state.userState);
+    const {products=[]}=useSelector(state=>state.productsState);
     const dispatch=useDispatch();
     let outOfStock=0;
 
@@ -22,17 +19,8 @@ export default function Dashboard() {
         });
     }
 
-    let totalAmount = 0;
-    if(adminOrders.length>0){
-        adminOrders.forEach(order=>{
-           totalAmount += order.totalPrice
-        })
-    }
-
     useEffect(()=>{
         dispatch(getAdminProducts);
-        dispatch(getUsers);
-        dispatch(adminOrdersAction);
 
     },[])
 
@@ -47,7 +35,7 @@ export default function Dashboard() {
                     <div className="col-xl-12 col-sm-12 mb-3">
                         <div className="card text-white bg-primary o-hidden h-100">
                             <div className="card-body">
-                                <div className="text-center card-font-size">Total Amount<br /> <b>${totalAmount}</b>
+                                <div className="text-center card-font-size">Total Amount<br /> <b>$3425</b>
                                 </div>
                             </div>
                         </div>
@@ -60,12 +48,12 @@ export default function Dashboard() {
                             <div className="card-body">
                                 <div className="text-center card-font-size">Products<br /> <b>{products.length}</b></div>
                             </div>
-                            <Link className="card-footer text-white clearfix small z-1" to="/admin/products">
+                            <a className="card-footer text-white clearfix small z-1" to="/admin/products">
                                 <span className="float-left">View Details</span>
                                 <span className="float-right">
                                     <i className="fa fa-angle-right"></i>
                                 </span>
-                            </Link>
+                            </a>
                         </div>
                     </div>
 
@@ -73,14 +61,14 @@ export default function Dashboard() {
                     <div className="col-xl-3 col-sm-6 mb-3">
                         <div className="card text-white bg-danger o-hidden h-100">
                             <div className="card-body">
-                                <div className="text-center card-font-size">Orders<br /> <b>{adminOrders.length}</b></div>
+                                <div className="text-center card-font-size">Orders<br /> <b>345</b></div>
                             </div>
-                            <Link className="card-footer text-white clearfix small z-1" to="/admin/orders">
+                            <a className="card-footer text-white clearfix small z-1" to="/admin/orders">
                                 <span className="float-left">View Details</span>
                                 <span className="float-right">
                                     <i className="fa fa-angle-right"></i>
                                 </span>
-                            </Link>
+                            </a>
                         </div>
                     </div>
 
@@ -88,14 +76,14 @@ export default function Dashboard() {
                     <div className="col-xl-3 col-sm-6 mb-3">
                         <div className="card text-white bg-info o-hidden h-100">
                             <div className="card-body">
-                                <div className="text-center card-font-size">Users<br /> <b>{users.length}</b></div>
+                                <div className="text-center card-font-size">Users<br /> <b>55</b></div>
                             </div>
-                            <Link className="card-footer text-white clearfix small z-1" to="/admin/users">
+                            <a className="card-footer text-white clearfix small z-1" href="/admin/users">
                                 <span className="float-left">View Details</span>
                                 <span className="float-right">
                                     <i className="fa fa-angle-right"></i>
                                 </span>
-                            </Link>
+                            </a>
                         </div>
                     </div>
 

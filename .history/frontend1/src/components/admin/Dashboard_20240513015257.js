@@ -25,7 +25,7 @@ export default function Dashboard() {
     let totalAmount = 0;
     if(adminOrders.length>0){
         adminOrders.forEach(order=>{
-           totalAmount += order.totalPrice
+            order.totalPrice
         })
     }
 
@@ -47,7 +47,7 @@ export default function Dashboard() {
                     <div className="col-xl-12 col-sm-12 mb-3">
                         <div className="card text-white bg-primary o-hidden h-100">
                             <div className="card-body">
-                                <div className="text-center card-font-size">Total Amount<br /> <b>${totalAmount}</b>
+                                <div className="text-center card-font-size">Total Amount<br /> <b>$3425</b>
                                 </div>
                             </div>
                         </div>
