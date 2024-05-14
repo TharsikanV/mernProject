@@ -8,7 +8,7 @@ const sendEmail=async options=>{
             pass:process.env.SMTP_PASS
         }
     };
-    // const transport = nodemailer.createTransport({
+    // const transport = nodemailer.createTransport(
     //     host: "sandbox.smtp.mailtrap.io",
     //     port: 2525,
     //     auth: {
@@ -16,16 +16,6 @@ const sendEmail=async options=>{
     //       pass: "f314c072d782cf"
     //     }
     //   });
-
-//////////////////////////////////////////
-// const transport = nodemailer.createTransport({
-//         host: "smtp.gmail.com",
-//         port: 587,
-//         auth: {
-//           user: "tharsikan650@gmail.com",
-//           pass: "kcidvznokomcjejh"
-//         }
-//       });
 
     const transporter=nodemailer.createTransport(transport);
 

@@ -167,18 +167,11 @@ const createReview=catchAsyncError(async(req,res,next)=>{
   }
 
   //find the average of the product reviews
-  product.ratings=product.reviews.reduce((acc,review)=>{
-    return acc+Number(review.rating);
-  },0)/product.reviews.length;
-  // let totalRating = 0;
-  // product.reviews.forEach(review => {
-  //     totalRating += Number(review.rating);
-  //     console.log(totalRating);
-    
-  // });
-  // product.ratings = totalRating / product.reviews.length;
+  // product.ratings=product.reviews.reduce((acc,review)=>{
+  //   return acc+review.rating;
+  // },0)/product.reviews.length;
   //acc oda initioal value
-  // console.log(product.ratings);
+  console.log(product.ratings);
   
 
   product.ratings=isNaN(product.ratings)?0:product.ratings;
@@ -215,8 +208,8 @@ const deleteReview=catchAsyncError(async(req,res,next)=>{
 
   //finding the average with the filtered reviews
   let ratings=reviews.reduce((acc,review)=>{//ellathayum koodi tharum
-    return acc+Number(review.rating);
-  },0)/reviews.length;
+    return acc+review.rating;
+  },0)/product.reviews.length;
 
   //acc oda initioal value
   ratings=isNaN(ratings)?0:ratings;

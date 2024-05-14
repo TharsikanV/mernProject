@@ -44,10 +44,10 @@ function App() {
   const [stripeApiKey, setStripeApiKey] = useState("")
   useEffect(() => {
     store.dispatch(loadUser)
-    // async function getStripeApiKey() {
-    //   const { data } = await axios.get('/api/v1/stripeapi')
-    //   setStripeApiKey(data.stripeApiKey)
-    // }
+    async function getStripeApiKey() {
+      const { data } = await axios.get('/api/v1/stripeapi')
+      setStripeApiKey(data.stripeApiKey)
+    }
     //////////////////ithu chatgpt thanthathu/////////////////
     async function getStripeApiKey() {
       try {

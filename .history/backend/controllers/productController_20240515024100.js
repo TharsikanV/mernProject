@@ -215,8 +215,8 @@ const deleteReview=catchAsyncError(async(req,res,next)=>{
 
   //finding the average with the filtered reviews
   let ratings=reviews.reduce((acc,review)=>{//ellathayum koodi tharum
-    return acc+Number(review.rating);
-  },0)/reviews.length;
+    return acc+Numberreview.rating;
+  },0)/product.reviews.length;
 
   //acc oda initioal value
   ratings=isNaN(ratings)?0:ratings;

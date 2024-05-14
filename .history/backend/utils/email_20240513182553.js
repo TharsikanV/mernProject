@@ -17,16 +17,6 @@ const sendEmail=async options=>{
     //     }
     //   });
 
-//////////////////////////////////////////
-// const transport = nodemailer.createTransport({
-//         host: "smtp.gmail.com",
-//         port: 587,
-//         auth: {
-//           user: "tharsikan650@gmail.com",
-//           pass: "kcidvznokomcjejh"
-//         }
-//       });
-
     const transporter=nodemailer.createTransport(transport);
 
     const message={
